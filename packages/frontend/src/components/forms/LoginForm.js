@@ -37,14 +37,16 @@ class LoginForm extends Component {
                              <TextField
                                  value={email}
                                  onChange={this.handleChange('email')}
-                                 label="Email"
+                                 label="EMAIL"
+                                 placeholder="iamcsk90@gmail.com"
                                  type="text"
                              />
 
                              <TextField
                                  value={password}
                                  onChange={this.handleChange('password')}
-                                 label="Password"
+                                 label="PASSWORD"
+                                 placeholder="**********"
                                  type="password"
                              />
 
@@ -61,7 +63,7 @@ class LoginForm extends Component {
                                 </div>
                              </div>  
 
-                             <div className="fx">
+                             <div className="fx actr">
                                 <div>
                                     <Button primary onClick={this.login}>Login</Button>
                                 </div>

@@ -20,3 +20,56 @@
 .App-link {
   color: #09d3ac;
 }
+
+
+.PublicHeader{
+  height: 120px;
+}
+
+.fx{
+  display: flex;
+}
+
+.jctr{
+  justify-content: center;
+}
+
+.jend{
+  justify-content: flex-end;
+}
+
+.tend{
+  text-align: end;
+}
+
+.actr{
+  align-items: center;
+}
+
+.grow-2{
+  flex-grow: 2;
+}
+
+.grow-1{
+  flex-grow: 1;
+}
+
+.col{
+  flex-direction: column;
+}
+
+.pb25{
+  padding-bottom: 25px;
+}
+
+.pt25{
+  padding-top: 25px;
+}
+
+.Polaris-FormLayout {
+  margin-top: -0.5rem;
+}
+
+.Polaris-DisplayText{
+  line-height: 4rem;
+}
