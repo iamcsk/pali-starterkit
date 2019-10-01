@@ -1,11 +1,11 @@
-# `frontend`
+# `@pali/shareable`
 
 > TODO: description
 
 ## Usage
 
 ```
-const frontend = require('frontend');
+const shareable = require('@pali/shareable');
 
 // TODO: DEMONSTRATE API
 ```

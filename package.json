@@ -1,7 +1,19 @@
 {
   "name": "root",
   "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "compile": "lerna",
+    "clean": "lerna run clean",
+    "lint": "lerna run lint",
+    "test": "lerna run test"
+  },
   "devDependencies": {
     "lerna": "^3.16.4"
+  },
+  "dependencies": {
+    "@shopify/polaris": "^4.3.0"
   }
 }

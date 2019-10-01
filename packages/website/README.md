@@ -1,11 +1,11 @@
-# `frontend`
+# `website`
 
 > TODO: description
 
 ## Usage
 
 ```
-const frontend = require('frontend');
+const website = require('website');
 
 // TODO: DEMONSTRATE API
 ```
