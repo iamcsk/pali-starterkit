@@ -70,6 +70,13 @@
   margin-top: -0.5rem;
 }
 
-.Polaris-DisplayText{
-  line-height: 4rem;
+.BannerImage {
+  width: 40%;
+  height: 40%;
+  min-width: 300px;
+  max-width: 500px;
+}
+
+.login-box {
+  max-width: 400px;
 }

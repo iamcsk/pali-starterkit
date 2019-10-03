@@ -16,7 +16,7 @@ const SignupPage = () => {
                         <DisplayText size="small">
                            An application helps you to improve your productvity.
                         </DisplayText>
-                        <img className="pt25" src="/svg/click_here.svg" alt="Kiwi standing on oval" width="500" height="500"></img>
+                        <img className="BannerImage pt25" src="/svg/click_here.svg" alt="Kiwi standing on oval"></img>
                     </div>
                 </Layout.Section>
 

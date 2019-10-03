@@ -16,7 +16,7 @@ const LoginPage = () => {
                         <DisplayText size="small">
                            To keep connected with us please login with email address and password
                         </DisplayText>
-                        <img className="pt25" src="/svg/login.svg" alt="Kiwi standing on oval" width="500" height="500"></img>
+                        <img className="BannerImage pt25" src="/svg/login.svg" alt="Kiwi standing on oval"></img>
                     </div>
                 </Layout.Section>
 

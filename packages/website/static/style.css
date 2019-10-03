@@ -1,0 +1,80 @@
+.fx{
+    display: flex;
+}
+
+.fx button{
+    margin: 4px;
+}
+
+.fx.cl{
+    flex-direction: column;
+}
+
+.l30{
+    left: 30%;
+}
+
+.mb20{
+    margin-bottom: 20px;
+}
+
+.Bottom {
+    bottom: 0px;
+    position: absolute;
+}
+
+.mb60{
+ margin-bottom: 60px;
+}
+
+.fx-g2{
+    flex-grow: 2;
+}
+
+.PageContainer{
+    padding: 0% 5%;
+    margin: 4% 0%;
+}
+
+.Polaris-Frame__TopBar{
+    padding: 1% 8%;
+}
+
+.Polaris-Card+.Polaris-Card{
+    margin-top: 0px;
+}
+
+.Polaris-Card{
+    margin: 0% 10px;
+    box-shadow: none;
+}
+
+.Feature-Card{
+    width: 40%;
+    margin: 0% 2%;
+    background: #ffffff;
+    padding: 18px;
+}
+
+.Feature-Card .Polaris-DisplayText--sizeSmall {
+    font-size: 14px;
+}
+
+
+.Feature-Card .Polaris-Heading{
+    margin-bottom: 15px;
+}
+
+.Polaris-Frame__TopBar{
+    position: absolute;
+}
+
+.PageRow {
+    padding: 0% 2%;
+}
+
+.CardContainer .Polaris-Card {
+    height: 440px;
+    width: 250px;
+    position: relative;
+}
