@@ -11,9 +11,7 @@ let AuthContainer = () => {
             {
               onCompleted({ login })  
               {
-                localStorage.setItem('token', login);
                 client.writeData({ data: { isLoggedIn: true } });
-                console.log(' CSK user logged in ', login);
               } 
             }
     )

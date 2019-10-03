@@ -7,7 +7,7 @@ function PrivateRoute({ component: Component, layout: Layout, ...rest}){
         {...rest}
         render={props =>
             Auth.isAuthenticated ? (
-              <div> Authenticated Form </div>
+              <Layout routeComponent={<Component {...props} />}></Layout>
             ) : (
               <Redirect
                 to={{
