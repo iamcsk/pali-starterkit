@@ -11,7 +11,7 @@ class PircingContainer extends Component {
              pricing: [
                  {
                      title: 'Free',
-                     description:'455 units available',
+                     description:'Startup',
                      items: [
                         {
                         id: 9941,

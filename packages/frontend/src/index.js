@@ -6,15 +6,12 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { AppProvider } from '@shopify/polaris'
 import { ApolloProvider } from '@apollo/react-hooks'
-import ApolloClient, {gql} from 'apollo-boost';
+import { AppClient } from './security/AppClient'
 
-const client = new ApolloClient({
-  uri: 'http://localhost:3333/graphql'
-})
 
 ReactDOM.render(
     <AppProvider>
-        <ApolloProvider client={client}>
+        <ApolloProvider client={AppClient}>
             <App />        
         </ApolloProvider>
     </AppProvider>
