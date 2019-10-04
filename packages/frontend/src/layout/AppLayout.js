@@ -1,48 +1,52 @@
 import React from 'react'
 import { AppProvider, Frame } from '@shopify/polaris';
 import AuthHeader from '../components/private/AuthHeader'
+import AppNavigations from '../components/AppNavigations'
+import theme from '../constants/theme'
 
-function AppLayout({ routeComponent: RouteComponent}){
+import { Component } from 'react'
 
-    const theme = {
-        colors: {
-          topBar: {
-            background: '#357997',
-          },
-        },
-        logo: {
-          width: 50,
-          topBarSource: '/white-logo.png',
-          url: '/home',
-          accessibilityLabel: 'PALI',
-        },
-      };
-    
-    return(
-        <AppProvider
-            theme={theme}
-            i18n={{
-            Polaris: {
-                Avatar: {
-                label: 'Avatar',
-                labelWithInitials: 'Avatar with initials {initials}',
-                },
-                Frame: {skipToContent: 'Skip to content'},
-                TopBar: {
-                toggleMenuLabel: 'Toggle menu',
-                SearchField: {
-                    clearButtonLabel: 'Clear',
-                    search: 'Search',
-                },
-                },
-            },
-            }}
-        >
-            <Frame topBar={<AuthHeader></AuthHeader>} >
-                {RouteComponent}   
-            </Frame>
-        </AppProvider>
-    );
+class AppLayout extends Component {
+
+    state = {
+        showMobileNavigation: false
+    }
+
+    render() {
+
+        const { RouteComponent } = this.props;
+
+        return (
+            <AppProvider
+                theme={theme}
+                i18n={{
+                Polaris: {
+                    Avatar: {
+                        label: 'Avatar',
+                        labelWithInitials: 'Avatar with initials {initials}',
+                    },
+                    Frame: {skipToContent: 'Skip to content'},
+                    TopBar: {
+                        toggleMenuLabel: 'Toggle menu',
+                        SearchField: {
+                            clearButtonLabel: 'Clear',
+                            search: 'Search',
+                        },
+                       },
+                    },
+                }}
+            >
+                <Frame 
+                    topBar={<AuthHeader></AuthHeader>} 
+                    navigation={<AppNavigations></AppNavigations> }
+                >
+                    <div className="MainPage">
+                        {RouteComponent}   
+                    </div>
+                </Frame>
+            </AppProvider>
+        )
+    }
 }
 
 export default AppLayout

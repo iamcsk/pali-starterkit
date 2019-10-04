@@ -1,7 +1,7 @@
 import React from 'react';
-import SignupForm from '../../components/forms/SignupForm'
-import { Page, Layout, DisplayText, Thumbnail } from '@shopify/polaris'
+import { Page, Layout, DisplayText } from '@shopify/polaris'
 import AppHeader from '../../components/public/AppHeader'
+import AuthContainer from '../../containers/AuthContainer'
 
 const SignupPage = () => {
     return (
@@ -22,7 +22,7 @@ const SignupPage = () => {
 
                 <Layout.Section secondary>
                     <div>
-                        <SignupForm></SignupForm>    
+                        <AuthContainer></AuthContainer>
                     </div>
                 </Layout.Section>
             </Layout>

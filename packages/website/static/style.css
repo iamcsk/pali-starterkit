@@ -50,10 +50,12 @@
 }
 
 .Feature-Card{
-    width: 40%;
-    margin: 0% 2%;
+    width: 30%;
+    margin: 1% 1%;
     background: #ffffff;
     padding: 18px;
+    min-width: 200px;
+    min-height: 170px;
 }
 
 .Feature-Card .Polaris-DisplayText--sizeSmall {
@@ -71,6 +73,8 @@
 
 .PageRow {
     padding: 0% 2%;
+    display: flex;
+    flex-flow: wrap;
 }
 
 .CardContainer .Polaris-Card {

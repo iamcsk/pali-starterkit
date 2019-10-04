@@ -34,10 +34,11 @@ const resolvers = {
 
         /* Create user account */ 
 
-        async createUser (_, { username, email, password}) {
+        async createUser (_, { username, email, password }) {
 
             try {
-                return await User.create({ username, email, password })
+                const user = await  User.create({ username, email, password })
+                return user
             } catch (error) {
                return error                 
             }

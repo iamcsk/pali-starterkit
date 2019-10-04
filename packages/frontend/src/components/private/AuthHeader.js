@@ -1,5 +1,6 @@
 import React, { useState, useCallback }  from 'react'
 import { TopBar, Card, ActionList } from '@shopify/polaris';
+import Auth from '../../security/Auth'
 
 
   export default function AuthHeader() 
@@ -33,10 +34,12 @@ import { TopBar, Card, ActionList } from '@shopify/polaris';
       <TopBar.UserMenu
         actions={[
           {
-            items: [{content: 'My Account'}],
+            items: [{content: 'My Account', onAction(){ console.log(' CSK requesting for my account')}}],
           },
           {
-            items: [{content: 'Signout'}],
+            items: [{content: 'Signout', onAction(){ 
+              Auth.signout()
+            }}],
           },
         ]}
         name="Dhoni"

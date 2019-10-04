@@ -3,6 +3,7 @@ import LoginForm from '../components/forms/LoginForm';
 import { useMutation, useApolloClient } from '@apollo/react-hooks'
 import { LOGIN_USER } from '../transport/mutations/auth'
 import { Loading, Frame } from '@shopify/polaris'
+import Auth from '../security/Auth'
 
 let AuthContainer = () => {
 
@@ -11,7 +12,9 @@ let AuthContainer = () => {
             {
               onCompleted({ login })  
               {
+                localStorage.setItem('token', login);
                 client.writeData({ data: { isLoggedIn: true } });
+                Auth.validateCache()
               } 
             }
     )
