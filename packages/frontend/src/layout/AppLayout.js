@@ -38,7 +38,9 @@ function AppLayout({ routeComponent: RouteComponent}){
             },
             }}
         >
-            <Frame topBar={<AuthHeader></AuthHeader>} />
+            <Frame topBar={<AuthHeader></AuthHeader>} >
+                {RouteComponent}   
+            </Frame>
         </AppProvider>
     );
 }
