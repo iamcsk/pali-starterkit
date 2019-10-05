@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Navigation } from '@shopify/polaris';
-import {ArrowLeftMinor, ConversationMinor, HomeMajorMonotone, OrdersMajorTwotone} from '@shopify/polaris-icons';
+import { ConversationMinor, HomeMajorMonotone, OrdersMajorTwotone} from '@shopify/polaris-icons';
 
 class AppNavigations extends Component {
 

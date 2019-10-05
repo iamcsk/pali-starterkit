@@ -1,10 +1,8 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { AppProvider, Frame } from '@shopify/polaris';
 import AuthHeader from '../components/private/AuthHeader'
 import AppNavigations from '../components/AppNavigations'
 import theme from '../constants/theme'
-
-import { Component } from 'react'
 
 class AppLayout extends Component {
 
@@ -14,7 +12,7 @@ class AppLayout extends Component {
 
     render() {
 
-        const { RouteComponent } = this.props;
+        const { routeComponent } = this.props;
 
         return (
             <AppProvider
@@ -41,7 +39,7 @@ class AppLayout extends Component {
                     navigation={<AppNavigations></AppNavigations> }
                 >
                     <div className="MainPage">
-                        {RouteComponent}   
+                        {routeComponent}
                     </div>
                 </Frame>
             </AppProvider>

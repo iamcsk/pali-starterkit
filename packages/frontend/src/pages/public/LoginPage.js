@@ -1,5 +1,5 @@
 import React from 'react';
-import { Page, Layout, DisplayText, Card } from '@shopify/polaris'
+import { Page, Layout, DisplayText } from '@shopify/polaris'
 import AuthContainer from '../../containers/AuthContainer'
 import AppHeader from '../../components/public/AppHeader'
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Page } from '@shopify/polaris';
 
-function ApplicationLayout({ routeComponent: RouteComponent}){
+function PageLayout({ routeComponent: RouteComponent}){
     
     return(
         <Page fullWidth>
@@ -10,4 +10,4 @@ function ApplicationLayout({ routeComponent: RouteComponent}){
     );
 }
 
-export default ApplicationLayout
+export default PageLayout

@@ -26,5 +26,7 @@
   "bugs": {
     "url": "https://github.com/iamcsk/pali-starterkit/issues"
   },
-  "homepage": "https://github.com/iamcsk/pali-starterkit#readme"
+  "homepage": "https://github.com/iamcsk/pali-starterkit#readme",
+  "dependencies": {
+  }
 }

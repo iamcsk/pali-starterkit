@@ -23,8 +23,9 @@ Route.get('/', () => {
   return { greeting: 'Hello world in JSON' }
 })
 
-
 Route.route('/graphql', ({ request, auth, response}) => {
+
+  console.log(' CSK request reached ')
 
   return ApolloServer.graphql({
     schema,
