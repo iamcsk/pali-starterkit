@@ -1,7 +1,7 @@
 import React from 'react';
 import { Page, Layout, DisplayText } from '@shopify/polaris'
 import AppHeader from '../../components/public/AppHeader'
-import AuthContainer from '../../containers/AuthContainer'
+import SignupContainer from '../../containers/SignupContainer';
 
 const SignupPage = () => {
     return (
@@ -22,7 +22,7 @@ const SignupPage = () => {
 
                 <Layout.Section secondary>
                     <div>
-                        <AuthContainer></AuthContainer>
+                        <SignupContainer></SignupContainer>
                     </div>
                 </Layout.Section>
             </Layout>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form, FormLayout, TextField, TextStyle, Button, Link, DisplayText } from '@shopify/polaris'
+import { Form, FormLayout, TextField, TextStyle, Button, Link } from '@shopify/polaris'
 
 class SignupForm extends React.Component {
   
@@ -9,7 +9,7 @@ class SignupForm extends React.Component {
     };
   
     render() {
-      const { username, lastname, password, email, companyname, devicecount, employeecount } = this.state;
+      const { username, lastname, password, email } = this.state;
   
       return (
         <div className="login-box">
@@ -63,17 +63,6 @@ class SignupForm extends React.Component {
                     </span>
                   }
                 />
-                <TextField
-                  value={companyname}
-                  onChange={this.handleChange('companyname')}
-                  label="PHONE"
-                  placeholder="+919789891669"
-                  type="text"
-                  helpText={
-                    <span>
-                    </span>
-                  }
-                />
             </FormLayout>
 
               <FormLayout>
@@ -85,7 +74,7 @@ class SignupForm extends React.Component {
 
                 <div className="fx actr">
                   <div>
-                      <Button primary>Sign up</Button>
+                    <Button primary onClick={this.signupUser}>Sign up</Button>
                   </div>
                   <div style={{marginLeft:8}}>
                   <TextStyle>Already have account</TextStyle>
@@ -101,13 +90,15 @@ class SignupForm extends React.Component {
       );
     }
   
-    handleSubmit = (event) => {
-      this.setState({ email: '', password:''});
-      // this.props.getPlaylist()
+    handleSubmit = () => {
+      this.props.CreateUser( { variables: { username: this.state.username, email: this.state.email, password: this.state.password} } );
     };
+
+    signupUser = () => {
+      this.props.CreateUser( { variables: { username: this.state.username, email: this.state.email, password: this.state.password} } );
+    }
   
     handleChange = (field) => {
-        console.log(' CSK field is here ', field)
       return (value) => this.setState({[field]: value});
     };
   }

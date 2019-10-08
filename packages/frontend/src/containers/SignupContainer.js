@@ -1,18 +1,19 @@
 import React from 'react';
-import SignupForm from '../components/public/SignupForm'
-import { useMutation, useApolloClient } from '@apollo/react-hooks'
-import { CREATE_USER } from '../graphql/mutations/auth'
+import SignupForm from '../components/forms/SignupForm'
+import { useMutation } from '@apollo/react-hooks'
+import { CREATE_USER } from '../transport/mutations/auth'
 import { Loading, Frame } from '@shopify/polaris'
-import Auth from '../security/Auth'
+import { withRouter } from 'react-router-dom'
 
-let SignupContainer = () => {
+let SignupContainer = (props) => {
 
-    const client = useApolloClient();
     const [CreateUser, { loading, error } ] = useMutation(CREATE_USER,
             {
-              onCompleted({ user })  
+              onCompleted({ createUser })  
               {
-                    console.log(' CSK user ', user)
+                    if(createUser){
+                      props.history.push('confirmemail')
+                    }
               } 
             }
     )
@@ -25,4 +26,4 @@ let SignupContainer = () => {
     </div>);
 }
 
-export default SignupContainer;
+export default withRouter(SignupContainer);
