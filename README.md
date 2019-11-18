@@ -1,4 +1,4 @@
-# Pali, A Boilerplate app for saas produxct
+# Pali, A Boilerplate app for saas product
 Pali starterkit for small, medium application developement 
 
 This boilerplate comes with many basic saas features so that development team can focus on 
